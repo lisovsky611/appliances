@@ -50,14 +50,14 @@ function showMiniCart() {
     $('.mini-cart').html(out);
 }
 
-function loadCart() {
+var loadCart = () => {
     if (localStorage.getItem('cart')) {
         cart = JSON.parse(localStorage.getItem('cart'));
         showMiniCart();
     }
 }
 
-$(document).ready(function () {
+$(document).ready(() => {
     init();
     loadCart();
 });
